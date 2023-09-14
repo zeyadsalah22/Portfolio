@@ -1,0 +1,135 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+
+{% block list %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'projects' %}">
+        <h5 class="pname-neon">Projects</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'certificates'%}">
+        <h5 class="neon">Certificates</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'skills' %}">
+        <h5 class="neon">About</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'contact' %}">
+        <h5 class="neon">Contact</h5>
+    </a>
+</li>
+{% endblock %}
+
+{% block body %}
+<script src="https://unpkg.com/swiper@6.8.4 swiper-bundle.min.js"></script>
+<main class="main-padding">
+    
+    <div class="swiper">
+        <div class="slider-box"></div>
+        <h3 class="web-neon">Web Development</h3>
+        <div class="swiper-wrapper">
+            {% for web in webs %}
+            <div class="swiper-slide ">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 project-img">
+                        <img src="{% static 'portfolio/'|add:web.image %}" class="img-fluid">
+                    </div>
+                    <div class="project-content offset-md-1 col-md-5">
+                        <h4 class="pname-neon">{{web.name}}</h4>
+                        <p><strong>Tools: </strong>{{web.tools}}</p>
+                        <br>
+                        <p>{{web.description}}</p>
+                        <br>
+                        <a class=" btn btn-dark purple-neon" href="{{web1.link}}">Visit</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination "></div>
+    </div>
+
+    <br>
+    <div class="swiper">
+        <div class="slider-box"></div>
+        <h3 class="web-neon">Artificial Intelligence</h3>
+        <div class="swiper-wrapper">
+            {% for ai in ais %}
+            <div class="swiper-slide ">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 project-img">
+                        <img src="{% static 'portfolio/'|add:ai.image %}" class="img-fluid">
+                    </div>
+                    <div class="project-content offset-md-1 col-md-5">
+                        <h4 class="pname-neon">{{ai.name}}</h4>
+                        <p><strong>Tools: </strong>{{ai.tools}}</p>
+                        <br>
+                        <p>{{ai.description}}</p>
+                        <br>
+                        <a class=" btn btn-dark purple-neon" href="{{ai.link}}">Visit</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination "></div>
+    </div>
+
+    <br>
+    <div class="swiper">
+        <div class="slider-box"></div>
+        <h3 class="web-neon">Digital Marketing</h3>
+        <div class="swiper-wrapper">
+            {% for digital in digitals %}
+            <div class="swiper-slide ">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 project-img">
+                        <img src="{% static 'portfolio/'|add:digital.image %}" class="img-fluid">
+                    </div>
+                    <div class="project-content offset-md-1 col-md-5">
+                        <h4 class="pname-neon">{{digital.name}}</h4>
+                        <p><strong>Tools: </strong>{{digital.tools}}</p>
+                        <br>
+                        <p>{{digital.description}}</p>
+                        <br>
+                        <a class=" btn btn-dark purple-neon" href="{{digital.link}}">Visit</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination "></div>
+    </div>
+    
+</main>
+<script type="text/javascript">
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+
+        autoplay: {
+        delay:4000,
+        disableOnInteraction: true
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        },
+        speed:1000,
+        keyboard: true,
+        mousewheel: true,
+    });
+    </script>
+{% endblock %}

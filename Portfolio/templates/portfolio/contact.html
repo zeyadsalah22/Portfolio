@@ -1,0 +1,69 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block list %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'projects' %}">
+        <h5 class="purple-neon">Projects</h5>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'certificates'%}">
+        <h5 class="neon">Certificates</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'skills' %}">
+        <h5 class="neon">About</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'contact' %}">
+        <h5 class="name-neon">Contact</h5>
+    </a>
+</li>
+{% endblock %}
+
+{% block body %}
+<main style="padding-top:15%;">
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="col-md-5 offset-md-1 ">
+            <h3 class="name-neon">Contact</h3>
+            <p>Looking forward to hearing from you</p>
+            <br>
+            <h5 >Phone</h5>
+            +20 1112215113
+            <br>
+            <br>
+            <h5 >Email</h5>
+            zeyad.moussa@ejust.edu.eg
+            <div class="container py-5">
+                <a href="https://www.linkedin.com/in/zeyad02" class=" nav-link fa fa-linkedin-square" id="linkedin"></a>
+                <a href="https://github.com/zeyadsalah22" class="nav-link fa fa-github-square github" id="github"></a>
+                <a href="https://www.facebook.com/zeyad.salah.526?mibextid=ZbWKwL" class="nav-link fa fa-facebook-square" id="facebook"></a>
+                <a href="https://instagram.com/zeyadsalah66?igshid=OGQ5ZDc2ODk2ZA==" class="nav-link fa fa-instagram" id="instagram"></a>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 contact-part mt-md-0 mt-4 ">
+            <form id="contact-form">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label name-neon">Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label name-neon">Email address*</label>
+                    <input type="email" class="form-control" required id='email' placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label name-neon">Message</label>
+                    <textarea class="form-control" id="message"  rows="3"></textarea>
+                  </div>
+                  <button class="btn btn-dark neon" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+</main>
+{% endblock %}

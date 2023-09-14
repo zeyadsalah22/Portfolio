@@ -1,0 +1,43 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+
+{% block list %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'projects' %}">
+        <h5 class="purple-neon">Projects</h5>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'certificates'%}">
+        <h5 class="neon">Certificates</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'skills' %}">
+        <h5 class="name-neon">About</h5>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'contact' %}">
+        <h5 class="neon">Contact</h5>
+    </a>
+</li>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="col-md-5 offset-md-1 main-part">
+            <h3>Hi, I'm <span class="name-neon">Zeyad</span></h3>
+            <p>A passionate undergraduate student majoring in Computer Science and Engineering,
+                actively seeking internships in the field of computer engineering.
+                My primary interests lie in Artificial Intelligence and Web Development.
+                I am eager to apply my knowledge and skills gained through real-life projects, which are showcased here.</p>
+        </div>
+        <div class="col-md-4 col-lg-4 main-img mt-md-0 mt-4 ">
+            <img src="{% static 'portfolio/main.jpeg' %}" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}

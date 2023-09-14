@@ -1,0 +1,196 @@
+body{
+    background-color: #2c2b29;
+    color:white;
+}
+
+nav{
+    background-color: #222120;
+}
+
+.name{
+    color:white;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 20px #f4f804, 0 0 50px #f4f804,0 0 70px #ff4800,0 0 100px #ff4800;
+    animation-delay: 0.3s;
+}
+
+
+.main-img{
+    
+    border-radius: 15px;
+    margin-right: 50px;
+}
+
+.main-img img{
+    border-radius: 15px;
+    box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+}
+
+@media (min-width: 992px) {
+    .main-img {
+        margin-left: 4rem;
+    }
+}
+
+@media (min-width:768px){
+    .slider-box{
+        left:20%;
+        margin-top: 1%;
+    }
+}
+
+@keyframes animate{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.neon{
+    color:white;
+    transition: text-shadow 0.3s;
+}
+
+.neon:hover{
+    text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+}
+
+
+.main-part {
+    padding-top:5%; 
+}
+
+.contact-part{
+    box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+    border-radius: 15px;
+    padding:2%;
+}
+.name-neon{
+    text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+}
+
+.main-padding{
+    padding-top: 8%;
+}
+
+@media (max-width: 768px){
+    .condition{
+        padding-top:25%;
+        width:80%;
+    }
+    .main-img{
+        width:60%;
+        margin: auto;
+        padding: auto;
+    }
+    .contact-part{
+        width:80%;
+    }
+
+    .main-padding{
+        padding-top: 15%;
+    }
+
+    .project-content{
+        text-align: center;
+        padding-top: 1%;
+    }
+    .slider-box{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.purple-neon{
+    color:white;
+}
+
+.purple-neon:hover{
+    text-shadow:0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;   
+}
+
+.pname-neon{
+    color:white;
+    text-shadow:0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;
+}
+
+.web-neon{
+    text-shadow: 0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;
+    margin:1%;
+
+}
+
+
+.swiper-pagination span{
+    background: white;
+    box-shadow: 0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;
+    height: 10px;
+    width: 10px;
+   }
+
+.slider-box{
+    width: 70%;
+    height: 85%;
+    margin-top:2%;
+    position: absolute;
+    border-radius: 25px;
+    top: 5%;
+    opacity: 0.7;
+    box-shadow:0 0 10px #04112c, 0 0 15px #04112c,0 0 20px #000000,0 0 30px #000000 ;
+    background: #383734;
+}
+
+.project-img{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    margin-left:1%;
+
+    
+}
+.project-img img {
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow:0 0 10px #0647a8, 0 0 30px #0647a8,0 0 50px #360272,0 0 70px #360272;
+
+}
+
+.project-content{
+    margin-top: 7%;
+    padding-bottom: 7%;
+
+}
+
+.name-neon {
+    color:white;
+    text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804, 0 0 15px #ff4800, 0 0 20px #ff4800;
+}
+
+#github,#linkedin,#facebook,#instagram{
+    font-size:2em;
+    background-color: #2c2b29;
+    border-radius:29px;
+    margin-right:10%;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080,
+     2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+    text-shadow:  0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+}
+
+#facebook{
+    text-shadow: 0 0 5px #3B5998, 0 0 10px #3B5998, 0 0 15px #3B5998, 0 0 20px #3B5998;
+}
+
+#linkedin{
+    text-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
+}
+
+#github{
+    text-shadow: 0 0 5px #171515, 0 0 10px #171515, 0 0 15px gray, 0 0 20px gray;
+}
+
+#instagram{
+    text-shadow: 0 0 5px #d62976, 0 0 10px #fa7e1e , 0 0 15px #962fbf, 0 0 20px #4f5bd5;
+}
