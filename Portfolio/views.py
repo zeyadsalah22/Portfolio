@@ -36,5 +36,5 @@ def projects(request):
     })
 
 
-def skills(request):
+def about(request):
     return render(request,'portfolio/about.html')

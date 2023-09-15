@@ -7,6 +7,10 @@ nav{
     background-color: #222120;
 }
 
+.heading{
+    font-size:50px;
+}
+
 .name{
     color:white;
     animation: animate 3s linear infinite;
