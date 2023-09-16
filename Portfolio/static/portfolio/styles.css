@@ -8,11 +8,11 @@ nav{
 }
 
 .heading{
-    font-size:100px;
+    font-size:70px;
 }
 
 .subheading{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .name{
@@ -23,10 +23,13 @@ nav{
 }
 
 
-.main-img, .about-img{
-    
+.main-img, .about-img{    
     border-radius: 15px;
     margin-right: 50px;
+}
+
+.about-img{
+    padding-top: 5%;
 }
 
 .main-img img{
@@ -36,7 +39,8 @@ nav{
 
 .about-img img{
     border-radius: 15px;
-    box-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;}
+    box-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
+}
 
 
 @media (min-width: 992px) {
@@ -93,10 +97,13 @@ nav{
         padding-top:25%;
         width:80%;
     }
-    .main-img{
+    .main-img,.about-img{
         width:60%;
         margin: auto;
         padding: auto;
+    }
+    .about-heading{
+        padding-top: 5%;
     }
     .contact-part{
         width:80%;
