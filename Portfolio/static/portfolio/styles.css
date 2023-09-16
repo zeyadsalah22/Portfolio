@@ -23,9 +23,14 @@ nav{
 }
 
 
-.main-img, .about-img{    
+.main-img, .about-img,.cer-img{    
     border-radius: 15px;
     margin-right: 50px;
+}
+
+.cer-img img{
+    border-radius:15px;
+    box-shadow: 0 0 1px  #ECEAE4, 0 0 2px  #ECEAE4,0 0 5px  #D0CAB9,0 0 10px #D0CAB9;
 }
 
 .about-img{
@@ -44,7 +49,7 @@ nav{
 
 
 @media (min-width: 992px) {
-    .main-img,.about-img {
+    .main-img,.about-img,.cer-img {
         margin-left: 4rem;
     }
 }
@@ -74,6 +79,19 @@ nav{
     text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
 }
 
+.cer{
+    color:white;
+    transition: text-shadow 0.3s;
+}
+
+.cer:hover{
+    text-shadow:0 0 1px  #ECEAE4, 0 0 2px  #ECEAE4,0 0 5px  #D0CAB9,0 0 10px #D0CAB9;
+}
+
+.cer-name{
+    color:white;
+    text-shadow:0 0 1px  #ECEAE4, 0 0 2px  #ECEAE4,0 0 5px  #D0CAB9,0 0 10px #D0CAB9;
+}
 
 .main-part {
     padding-top:5%; 
@@ -97,7 +115,7 @@ nav{
         padding-top:25%;
         width:80%;
     }
-    .main-img,.about-img{
+    .main-img,.about-img,.cer-img{
         width:60%;
         margin: auto;
         padding: auto;
@@ -173,7 +191,7 @@ nav{
 .project-img img {
     justify-content: center;
     border-radius: 15px;
-    box-shadow:0 0 10px #0647a8, 0 0 30px #0647a8,0 0 50px #360272,0 0 70px #360272;
+    box-shadow:0 0 10px #0647a8, 0 0 20px #0647a8,0 0 30px #360272,0 0 40px #360272;
 
 }
 
