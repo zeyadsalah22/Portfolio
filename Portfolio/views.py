@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect,JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
-from .models import Certificate,Skill,Project,Texter
+from .models import Certificate,Project,Texter
 import json 
 def index(request):
     return render(request,'portfolio/index.html')

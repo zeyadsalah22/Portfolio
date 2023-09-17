@@ -12,15 +12,6 @@ class Project(models.Model):
     def __str__(self):
         return f"Project: {self.name}"
 
-class Skill(models.Model):
-    order = models.IntegerField()
-    name = models.CharField(max_length=64)
-    category = models.CharField(max_length=64)
-    acquired = models.TextField()
-
-    def __str__(self):
-        return f"Skill: {self.name}"
-
 class Certificate(models.Model):
     order = models.IntegerField()
     name = models.CharField(max_length=64)
