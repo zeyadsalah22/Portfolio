@@ -17,9 +17,7 @@ nav{
 
 .name{
     color:white;
-    animation: animate 3s linear infinite;
-    text-shadow: 0 0 20px #f4f804, 0 0 50px #f4f804,0 0 70px #ff4800,0 0 100px #ff4800;
-    animation-delay: 0.3s;
+    text-shadow: 0 0 5px #d62976, 0 0 10px #fa7e1e , 0 0 15px #962fbf, 0 0 20px #4f5bd5;
 }
 
 
@@ -164,7 +162,7 @@ nav{
 
 .swiper-pagination span{
     background: white;
-    text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+    box-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
     height: 10px;
     width: 10px;
    }
@@ -191,6 +189,7 @@ nav{
 .project-img img {
     justify-content: center;
     border-radius: 15px;
+    box-shadow: 0 0 1px rgb(59, 57, 57), 0 0 5px rgb(59, 57, 57);
 
 }
 
