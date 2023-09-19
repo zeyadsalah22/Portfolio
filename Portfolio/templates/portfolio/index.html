@@ -4,18 +4,18 @@
 {% block list %}
 <li class="nav-item">
     <a class="nav-link" href="{% url 'projects' %}">
-        <h5 class="purple-neon">Projects</h5>
+        <h5 class="neon">Projects</h5>
     </a>
 </li>
 
 <li class="nav-item">
     <a class="nav-link" href="{% url 'certificates'%}">
-        <h5 class="cer">Certificates</h5>
+        <h5 class="neon">Certificates</h5>
     </a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{% url 'about' %}">
-        <h5 class="about-neon">About</h5>
+        <h5 class="neon">About</h5>
     </a>
 </li>
 <li class="nav-item">
@@ -30,8 +30,8 @@
 <div class="container">
     <div class="row justify-content-center ">
         <div class="col-md-5 offset-md-1 main-part">
-            <h1 class="heading">I<span class="name-neon">'</span>m <span class="name-neon">Zeyad Salah</span>.</h1>
-            <span class="subheading">CSE Student @ EJUST</span>
+            <h1 class="heading">I<span class="name-neon">'</span>m <i>Zeyad Salah</i><span class="name-neon">.</span></h1>
+            <span class="subheading">CSE Student <span class="name-neon">@</span> EJUST</span>
         </div>
         <div class="col-md-4 col-lg-4 main-img mt-md-0 mt-4 ">
             <img src="{% static 'portfolio/main.jpeg' %}" class="img-fluid">

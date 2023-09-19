@@ -4,18 +4,18 @@
 {% block list %}
 <li class="nav-item">
     <a class="nav-link" href="{% url 'projects' %}">
-        <h5 class="purple-neon">Projects</h5>
+        <h5 class="neon">Projects</h5>
     </a>
 </li>
 
 <li class="nav-item">
     <a class="nav-link" href="{% url 'certificates'%}">
-        <h5 class="cer-name">Certificates</h5>
+        <h5 class="name-neon">Certificates</h5>
     </a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{% url 'about' %}">
-        <h5 class="about-neon">About</h5>
+        <h5 class="neon">About</h5>
     </a>
 </li>
 <li class="nav-item">
@@ -30,23 +30,23 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
 {% for certificate in certificates%}
 <div class="col">
-    <div class="cer-img ">
+    <div class="main-img ">
         <img src="{% static 'portfolio/'|add:certificate.image %}" class="img-fluid">
     </div>
     <br>
     <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal-{{certificate.id}}">
-        <h3 class="cer" style="text-align:center">{{certificate.name}}</h3>
+        <h3 class="neon" style="text-align:center">{{certificate.name}}</h3>
     </a>
     
   <div class="modal modal-lg fade" id="exampleModal-{{certificate.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header" style="background-color: #222120;">
-          <h1 class="modal-title fs-5 cer" id="exampleModalLabel">{{certificate.name}}</h1>
+          <h1 class="modal-title fs-5 neon" id="exampleModalLabel">{{certificate.name}}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" style="background-color: #2c2b29;">
-            <div class="cer-img ">
+            <div class="main-img ">
                 <img src="{% static 'portfolio/'|add:certificate.image %}" class="img-fluid">
             </div>
         </div>

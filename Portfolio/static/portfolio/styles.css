@@ -44,7 +44,7 @@ nav{
 
 .about-img img{
     border-radius: 15px;
-    box-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
+    box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
 }
 
 
@@ -156,7 +156,7 @@ nav{
 }
 
 .web-neon{
-    text-shadow: 0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;
+    text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
     margin:1%;
 
 }
@@ -164,7 +164,7 @@ nav{
 
 .swiper-pagination span{
     background: white;
-    box-shadow: 0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;
+    text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
     height: 10px;
     width: 10px;
    }
@@ -191,7 +191,6 @@ nav{
 .project-img img {
     justify-content: center;
     border-radius: 15px;
-    box-shadow:0 0 10px #0647a8, 0 0 20px #0647a8,0 0 30px #360272,0 0 40px #360272;
 
 }
 
