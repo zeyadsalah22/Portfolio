@@ -113,6 +113,10 @@ nav{
     text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
 }
 
+.contact-padding{
+    padding-top: 15%;
+}
+
 .main-padding{
     padding-top: 10%;
 }
@@ -121,6 +125,9 @@ nav{
     .condition{
         padding-top:25%;
         width:80%;
+    }
+    .contact-padding{
+        padding-top: 21%;
     }
     .main-img,.about-img,.cer-img{
         width:60%;
