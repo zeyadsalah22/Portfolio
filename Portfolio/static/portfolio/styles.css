@@ -3,10 +3,6 @@
     src: url("{% static 'portfolio/fonts/magnific.ttf' %}") format('truetype');
 }
 
-.navbar-toggler-icon{
-    color:white;
-}
-
 body{
     background-color: #2c2b29;
     color:white;
@@ -121,9 +117,7 @@ nav{
     padding-top: 10%;
 }
 
-.navbar-toggler .navbar-toggler-icon {
-    color: white;
-  }
+
 @media (max-width: 768px){
     .condition{
         padding-top:25%;
@@ -131,6 +125,13 @@ nav{
     }
     .contact-padding{
         padding-top: 21%;
+    }
+    .heading{
+        font-size:40px;
+    }
+    
+    .subheading{
+        font-size: 20px;
     }
     .main-img,.about-img,.cer-img{
         width:60%;
@@ -156,6 +157,9 @@ nav{
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+    .main-part{
+        text-align: center;
     }
 }
 
