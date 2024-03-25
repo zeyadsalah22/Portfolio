@@ -1,5 +1,5 @@
 cs50==9.2.5
-whitenoise==5.3.0
+whitenoise
 defusedxml==0.7.1
 diff-match-patch==20200713
 Django==3.2.20
