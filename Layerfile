@@ -10,7 +10,6 @@ RUN apt-get update && \
 
 # Install django & postgresql python driver
 RUN pip3 install Django psycopg2
-RUN pip3 install -r requirements.txt
 
 # Set up database
 RUN sudo -u postgres -H -- psql -t -c "CREATE DATABASE mydb;"
@@ -23,6 +22,7 @@ RUN sudo -u postgres -H -- psql -t -c "\
 
 # Copy project files
 COPY . .
+RUN pip3 install -r requirements.txt
 
 # Tell Django how to talk to the database
 RUN echo 'DATABASES={"default": {\
