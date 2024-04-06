@@ -22,7 +22,6 @@ RUN sudo -u postgres -H -- psql -t -c "\
 
 # Copy project files
 COPY . .
-RUN pip3 install -r requirements.txt
 
 # Tell Django how to talk to the database
 RUN echo 'DATABASES={"default": {\
