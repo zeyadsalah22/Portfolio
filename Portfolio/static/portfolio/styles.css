@@ -21,15 +21,13 @@ nav{
 }
 
 .subheading{
-    font-size: 10px;
+    font-size: 30px;
 }
 
 .name{
     font-family: OstrichSans-Bold;
-    font-weight: bold;
     font-style: normal;
     color:white;
-    text-shadow: 0 0 5px #d62976, 0 0 10px #fa7e1e , 0 0 15px #962fbf, 0 0 20px #4f5bd5;
 }
 
 
