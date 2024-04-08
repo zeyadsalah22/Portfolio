@@ -2,7 +2,11 @@
     font-family: 'Magnific Caos';
     src: url("{% static 'portfolio/fonts/magnific.ttf' %}") format('truetype');
 }
-
+@font-face {
+    font-family: OstrichSans-Bold;
+    src: url("portfolio/ostrich-sans-master/OstrichSans-Bold.otf");
+    font-weight: bold;
+}
 body{
     background-color: #2c2b29;
     color:white;
@@ -17,10 +21,13 @@ nav{
 }
 
 .subheading{
-    font-size: 40px;
+    font-size: 10px;
 }
 
 .name{
+    font-family: OstrichSans-Bold;
+    font-weight: bold;
+    font-style: normal;
     color:white;
     text-shadow: 0 0 5px #d62976, 0 0 10px #fa7e1e , 0 0 15px #962fbf, 0 0 20px #4f5bd5;
 }
