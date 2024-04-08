@@ -35,6 +35,9 @@ nav{
 }
 
 .cer-img img{
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
     border-radius:15px;
     box-shadow: 0 0 1px  #ECEAE4, 0 0 2px  #ECEAE4,0 0 5px  #D0CAB9,0 0 10px #D0CAB9;
 }
@@ -49,6 +52,7 @@ nav{
 }
 
 .about-img img{
+    margin-bottom: 1rem;
     border-radius: 15px;
     box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
 }
@@ -57,7 +61,6 @@ nav{
 @media (min-width: 992px) {
     .main-img,.about-img,.cer-img {
         margin-left: 4rem;
-        margin-bottom: 1rem;
     }
 }
 
