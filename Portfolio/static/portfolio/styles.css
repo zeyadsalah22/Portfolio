@@ -1,8 +1,4 @@
 @font-face {
-    font-family: 'Magnific Caos';
-    src: url("{% static 'portfolio/fonts/magnific.ttf' %}") format('truetype');
-}
-@font-face {
     font-family: OstrichSans-Bold;
     src: url("portfolio/ostrich-sans-master/OstrichSans-Bold.otf");
     font-weight: bold;
