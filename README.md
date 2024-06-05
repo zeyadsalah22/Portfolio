@@ -11,11 +11,7 @@ This is the repository for my personal portfolio website, implemented using the 
   - [About Page](#about-page)
   - [Contact Page](#contact-page)
 - [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Website](#website)
 
 ## Overview
 This project is a personal portfolio website to showcase my projects, certificates, and provide information about myself. It includes a contact form to allow visitors to get in touch with me.
