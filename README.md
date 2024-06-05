@@ -11,6 +11,8 @@ This is the repository for my personal portfolio website, implemented using the 
   - [About Page](#about-page)
   - [Contact Page](#contact-page)
 - [Technologies Used](#technologies-used)
+- [Database Models](#database-models)
+- [Django Views](#django-views)
 - [Website](#website)
 
 ## Overview
@@ -54,6 +56,56 @@ The Contact Page includes:
 - JavaScript
 - Bootstrap
 - SwiperJS
+
+## Database Models
+The project uses the following database models:
+
+### Project
+- **order**: IntegerField
+- **name**: CharField(max_length=64)
+- **category**: CharField(max_length=64)
+- **image**: CharField(max_length=64)
+- **link**: URLField
+- **tools**: TextField
+- **description**: TextField
+
+### Certificate
+- **order**: IntegerField
+- **name**: CharField(max_length=64)
+- **image**: CharField(max_length=64)
+
+### Texter
+- **name**: CharField(max_length=64)
+- **email**: CharField(max_length=150)
+- **message**: TextField
+
+## Django Views
+The project includes the following Django views and functions:
+
+### Index View
+- **URL**: `/`
+- **Function**: `index`
+- **Description**: Displays the home page with my photo, name, position, and university.
+
+### Certificate View
+- **URL**: `/certificates/`
+- **Function**: `certificate`
+- **Description**: Displays all certificates in a grid.
+
+### Contact View
+- **URL**: `/contact/`
+- **Function**: `contact`
+- **Description**: Handles GET requests to display the contact page and POST requests to handle form submissions.
+
+### Projects View
+- **URL**: `/projects/`
+- **Function**: `projects`
+- **Description**: Displays projects categorized into Web Development, AI, and Digital Marketing.
+
+### About View
+- **URL**: `/about/`
+- **Function**: `about`
+- **Description**: Displays the about page with a summary and resume download option.
 
 ## Website
 To visit the website, follow [this link](https://portfolio-2hv5.onrender.com/).
