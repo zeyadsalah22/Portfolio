@@ -43,7 +43,11 @@
                         <p><strong>Tools: </strong>{{web.tools}}</p>
                         <br>
                         <p>{{web.description}}</p>
-                        
+                        {% if web.link %}
+                        <a href="{{web.link}}" target="_blank">
+                            <button class="btn btn-dark neon">Visit <i class="fa fa-link"></i></button>
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
