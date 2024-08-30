@@ -4,9 +4,7 @@ from django.urls import reverse
 from .models import Certificate,Project,Texter
 import json 
 def index(request):
-    webs = Project.objects.filter(category='Web Development').order_by('order')
     return render(request,'portfolio/index.html')
-    return render(request,'portfolio/index.html',{'webs': webs})
 
 def certificate(request):
     certificates = Certificate.objects.all().order_by('order')
