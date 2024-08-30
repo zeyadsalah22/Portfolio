@@ -26,6 +26,7 @@
 {% endblock %}
 
 {% block body %}
+<script src="https://unpkg.com/swiper@6.8.4 swiper-bundle.min.js"></script>
 <main style="padding-top:15%;">
 <div class="container">
     <div class="row justify-content-center ">
@@ -33,12 +34,60 @@
             <h1 class="heading">I<span class="name-neon">'</span>m Zeyad Salah<span class="name-neon">.</span></h1>
             <span class="subheading">CSE Student <span class="">@</span> EJUST <span class="name-neon">|</span></span>
             <br>
-            <span class="subheading"> <span class="">.</span>Net Backend Engineer <span class="">@</span> DEPI</span>
+            <span class="subheading"> <span class="">.</span>Net Backend Intern <span class="">@</span> DEPI</span>
         </div>
         <div class="col-md-4 col-lg-4 main-img mt-md-0 mt-4 ">
             <img src="{% static 'portfolio/main.jpeg' %}" class="img-fluid">
         </div>
     </div>
 </div>
+<div class="swiper">
+    <div class="slider-box"></div>
+    <div class="swiper-wrapper">
+        {% for web in webs %}
+        <div class="swiper-slide ">
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 project-img">
+                    <img src="{% static 'portfolio/'|add:web.image %}" class="img-fluid">
+                </div>
+                <div class="project-content offset-md-1 col-md-5">
+                    <h4 class="name-neon">{{web.name}}</h4>
+                    <p><strong>Tools: </strong>{{web.tools}}</p>
+                    <br>
+                    <p>{{web.description}}</p>
+                    {% if web.link %}
+                    <a href="{{web.link}}" target="_blank">
+                        <button class="btn btn-dark neon">Visit <i class="fa fa-link"></i></button>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-pagination "></div>
+</div>
 </main>
+<script type="text/javascript">
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+
+        autoplay: {
+        delay:4000,
+        disableOnInteraction: true
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        },
+        speed:1000,
+        keyboard: true,
+        mousewheel: true,
+    });
+    </script>
 {% endblock %}

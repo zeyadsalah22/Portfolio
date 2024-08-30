@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function getCookie(name) {
+    
+    document.body.classList.add("loaded");
+    
+    const elements = document.querySelectorAll('.main-part h1, .main-part .subheading');
+    
+    elements.forEach((element, index) => {
+        setTimeout(function() {
+            element.classList.add('typing-animation');
+            element.style.width = '100%';
+            element.style.opacity = '1';
+
+            element.addEventListener('animationend', function() {
+                element.style.borderRight = 'none';
+                element.style.width = 'auto';
+                element.classList.remove('typing-animation');
+            });
+        }, 1000 + index * 2000); // 1-second initial delay + 2 seconds between each element
+    });
+
+    setTimeout(function() {
+        const swiperContainer = document.querySelector('.swiper');
+        swiperContainer.classList.add('animate');
+    }, 500); // 1-second delay before animation starts
+
+    function getCookie(name) {
       let cookieValue = null;
       if (document.cookie && document.cookie !== '') {
           const cookies = document.cookie.split(';');

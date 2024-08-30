@@ -48,7 +48,16 @@ nav{
 .main-img img{
     border-radius: 15px;
     box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+    transform:  translateX(50%);
+    opacity: 0;
+    transition: transform 0.8s ease-in, opacity 1s ease-in;
 }
+
+body.loaded .main-img img{
+    transform:  translateX(0);
+    opacity: 1;
+  }
+  
 
 .about-img img{
     margin-bottom: 1rem;
@@ -97,20 +106,87 @@ nav{
     text-shadow:0 0 1px  #ECEAE4, 0 0 2px  #ECEAE4,0 0 5px  #D0CAB9,0 0 10px #D0CAB9;
 }
 
-.cer-name{
-    color:white;
-    text-shadow:0 0 1px  #ECEAE4, 0 0 2px  #ECEAE4,0 0 5px  #D0CAB9,0 0 10px #D0CAB9;
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
+
+/* Initial state of certificate images */
+.cer-img img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 2s ease-out 0.5s forwards; /* 1-second animation with a 0.5-second delay */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cer-name{
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+  
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
 
 .main-part {
-    padding-top:5%; 
+    padding-top:5%;
 }
 
-.contact-part{
-    box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
-    border-radius: 15px;
-    padding:2%;
+.main-part h1, .main-part .subheading {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 2%;
+    border-right: 0.1em solid #000;
+    width: 0;
+    display: inline-block;
+    opacity: 0;
 }
+
+
+.typing-animation {
+animation: typing 2s steps(40, end) 1 normal both,
+            blink-caret 0.75s step-end infinite;
+}
+
+@keyframes slideShadow {
+    0% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804, 0 0 15px #ff4800, 0 0 20px #ff4800;
+    }
+}
+
+.contact-part {
+    box-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804, 0 0 15px #ff4800, 0 0 20px #ff4800;
+    border-radius: 15px;
+    padding: 2%;
+    animation: slideShadow 2s ease-out;
+}
+
+
 .name-neon{
     text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
 }
@@ -169,22 +245,8 @@ nav{
     }
 }
 
-.purple-neon{
-    color:white;
-}
-
-.purple-neon:hover{
-    text-shadow:0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;   
-}
-
-.pname-neon{
-    color:white;
-    text-shadow:0 0 5px #0647a8, 0 0 10px #0647a8,0 0 15px #360272,0 0 20px #360272;
-}
-
 .web-neon{
     margin:1%;
-
 }
 
 
@@ -210,10 +272,9 @@ nav{
 .project-img{
     padding-top: 7%;
     padding-bottom: 7%;
-    margin-left:1%;
-
-    
+    margin-left:1%;  
 }
+
 .project-img img {
     width: 600px; 
     height: 350px; 
@@ -221,13 +282,36 @@ nav{
     justify-content: center;
     border-radius: 15px;
     box-shadow: 0 0 5px #0d2b6b00, 0 0 10px #0d2b6b00;
-
 }
 
 .project-content{
     margin-top: 7%;
     padding-bottom: 7%;
 
+}
+
+@keyframes fadeInZoom {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+
+/* Apply animation to the Swiper container */
+.swiper {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* Add this class to trigger the animation */
+.swiper.animate {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .name-neon {
@@ -246,31 +330,41 @@ nav{
     text-shadow:  0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
 }
 
-.aboutt-neon{
-    text-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
-    color:white;
-}
-
-.about-neon{
-    color:white;
-}
-
-.about-neon:hover{
-    text-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
-}
 
 #facebook{
     text-shadow: 0 0 5px #3B5998, 0 0 10px #3B5998, 0 0 15px #3B5998, 0 0 20px #3B5998;
+    animation: fadeIn 2s ease-out;
 }
+
+
+#facebook:hover{
+    text-shadow: 0 0 10px #3B5998, 0 0 15px #3B5998, 0 0 20px #3B5998, 0 0 25px #3B5998;
+}
+
 
 #linkedin{
     text-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
+    animation: fadeIn 2s ease-out;
+}
+
+#linkedin:hover{
+    text-shadow: 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5, 0 0 25px #007bb5;
 }
 
 #github{
     text-shadow: 0 0 5px #171515, 0 0 10px #171515, 0 0 15px gray, 0 0 20px gray;
+    animation: fadeIn 2s ease-out;
+}
+
+#github:hover{
+    text-shadow: 0 0 10px #171515, 0 0 15px #171515, 0 0 20px gray, 0 0 25px gray;
 }
 
 #instagram{
+    animation: fadeIn 2s ease-out;
     text-shadow: 0 0 5px #d62976, 0 0 10px #fa7e1e , 0 0 15px #962fbf, 0 0 20px #4f5bd5;
+}
+
+#instagram:hover{
+    text-shadow: 0 0 10px #d62976, 0 0 15px #fa7e1e , 0 0 20px #962fbf, 0 0 25px #4f5bd5;
 }
