@@ -16,6 +16,11 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 CSRF_COOKIE_SAMESITE = 'Lax'  # or 'Strict'
+CSRF_COOKIE_SECURE = True      # Use True if using HTTPS
+CSRF_TRUSTED_ORIGINS = [
+    'https://portfolio-2hv5.onrender.com',
+    # Add other trusted domains if needed
+]
 
 
 # Quick-start development settings - unsuitable for production
