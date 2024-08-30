@@ -63,8 +63,33 @@ body.loaded .main-img img{
     margin-bottom: 1rem;
     border-radius: 15px;
     box-shadow:0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
+    animation: slideShadow 2s ease-out;
 }
 
+
+/* Apply progressively to individual elements within .about-heading */
+.about-heading h1,
+.about-heading p,
+.about-heading a {
+    opacity: 0; /* Start with the element hidden */
+    animation: fadeIn 3s ease-out forwards; /* Apply fade-in animation */
+}
+
+.about-heading h1 {
+    animation-delay: 0s; /* No delay for the heading */
+}
+
+.about-heading p:nth-of-type(1) {
+    animation-delay: 0.5s; /* Delay for the first paragraph */
+}
+
+.about-heading p:nth-of-type(2) {
+    animation-delay: 1.5s; /* Delay for the second paragraph */
+}
+
+.about-heading a {
+    animation-delay: 2.5s; /* Delay for the button */
+}
 
 @media (min-width: 992px) {
     .main-img,.about-img,.cer-img {
