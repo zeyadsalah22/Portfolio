@@ -228,7 +228,7 @@ animation: typing 2s steps(40, end) 1 normal both,
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 992px){
     .condition{
         padding-top:25%;
         width:80%;

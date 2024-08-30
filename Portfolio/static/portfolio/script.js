@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.forEach((element, index) => {
         setTimeout(function() {
             element.classList.add('typing-animation');
-            element.style.width = '100%';
+            element.style.width = 'auto';
             element.style.opacity = '1';
 
             element.addEventListener('animationend', function() {
