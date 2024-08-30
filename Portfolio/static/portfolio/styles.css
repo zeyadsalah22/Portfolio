@@ -208,9 +208,12 @@ animation: typing 2s steps(40, end) 1 normal both,
     box-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804, 0 0 15px #ff4800, 0 0 20px #ff4800;
     border-radius: 15px;
     padding: 2%;
-    animation: slideShadow 2s ease-out;
+    animation: slideShadow 3s ease-out;
 }
 
+.contact-heading{
+    animation: fadeIn 3s ease-out;
+}
 
 .name-neon{
     text-shadow: 0 0 5px #f4f804, 0 0 10px #f4f804,0 0 15px #ff4800,0 0 20px #ff4800;
@@ -358,7 +361,7 @@ animation: typing 2s steps(40, end) 1 normal both,
 
 #facebook{
     text-shadow: 0 0 5px #3B5998, 0 0 10px #3B5998, 0 0 15px #3B5998, 0 0 20px #3B5998;
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 3s ease-out;
 }
 
 
@@ -369,7 +372,7 @@ animation: typing 2s steps(40, end) 1 normal both,
 
 #linkedin{
     text-shadow: 0 0 5px #007bb5, 0 0 10px #007bb5, 0 0 15px #007bb5, 0 0 20px #007bb5;
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 3s ease-out;
 }
 
 #linkedin:hover{
@@ -378,7 +381,7 @@ animation: typing 2s steps(40, end) 1 normal both,
 
 #github{
     text-shadow: 0 0 5px #171515, 0 0 10px #171515, 0 0 15px gray, 0 0 20px gray;
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 3s ease-out;
 }
 
 #github:hover{
@@ -386,7 +389,7 @@ animation: typing 2s steps(40, end) 1 normal both,
 }
 
 #instagram{
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 3s ease-out;
     text-shadow: 0 0 5px #d62976, 0 0 10px #fa7e1e , 0 0 15px #962fbf, 0 0 20px #4f5bd5;
 }
 
