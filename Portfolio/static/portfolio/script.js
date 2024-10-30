@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function() {
         const swiperContainer = document.querySelector('.swiper');
         swiperContainer.classList.add('animate');
-    }, 500); // 1-second delay before animation starts
+    }, 500); // 0.5-second delay before animation starts
 
     function getCookie(name) {
       let cookieValue = null;
