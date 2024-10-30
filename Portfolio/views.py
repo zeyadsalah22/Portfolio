@@ -1,10 +1,10 @@
-from django.http import HttpResponse, HttpResponseRedirect,JsonResponse
+from django.http import HttpResponse, HttpResponseNotAllowed, HttpResponseRedirect,JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from .models import Certificate,Project,Texter
 import json 
+
 def index(request):
-    
     certificates = Certificate.objects.all().order_by('order')
     webs = Project.objects.filter(category='Web Development').order_by('order')
     ais = Project.objects.filter(category='AI').order_by('order')
@@ -15,13 +15,6 @@ def index(request):
         'webs': webs,
         'ais': ais,
         'digitals': digitals,
-    })
-
-
-def certificate(request):
-    certificates = Certificate.objects.all().order_by('order')
-    return render(request,'portfolio/certificate.html',{
-        'certificates' : certificates
     })
 
 def contact(request):
@@ -35,18 +28,4 @@ def contact(request):
         return JsonResponse({"message": "message sent successfully."}, status=201)
 
     else:
-        return render(request,'portfolio/contact.html')
-
-def projects(request):
-    webs = Project.objects.filter(category='Web Development').order_by('order')
-    ais = Project.objects.filter(category='AI').order_by('order')
-    digitals = Project.objects.filter(category='Digital Marketing').order_by('order')
-    return render(request,'portfolio/projects.html',{
-        'webs': webs,
-        'ais': ais,
-        'digitals': digitals
-    })
-
-
-def about(request):
-    return render(request,'portfolio/about.html')
+        return HttpResponseNotAllowed(['POST'])

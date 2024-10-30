@@ -324,7 +324,7 @@ animation: typing 2s steps(40, end) 1 normal both,
       transform: scale(0.95);
     }
     to {
-      opacity: 1;
+      opacity: 1;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             c d
       transform: scale(1);
     }
 }
@@ -395,4 +395,9 @@ animation: typing 2s steps(40, end) 1 normal both,
 
 #instagram:hover{
     text-shadow: 0 0 10px #d62976, 0 0 15px #fa7e1e , 0 0 20px #962fbf, 0 0 25px #4f5bd5;
+}
+
+section{
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 }

@@ -3,32 +3,33 @@
 
 {% block list %}
 <li class="nav-item">
-    <a class="nav-link" href="{% url 'projects' %}">
+    <a class="nav-link" href="#projects">
         <h5 class="neon">Projects</h5>
     </a>
 </li>
 
 <li class="nav-item">
-    <a class="nav-link" href="{% url 'certificates'%}">
+    <a class="nav-link" href="#certificate">
         <h5 class="neon">Certificates</h5>
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="{% url 'about' %}">
+    <a class="nav-link" href="#about">
         <h5 class="neon">About</h5>
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="{% url 'contact' %}">
+    <a class="nav-link" href="#contact">
         <h5 class="neon">Contact</h5>
     </a>
 </li>
 {% endblock %}
 
 {% block body %}
-<main style="padding-top:15%;">
+<main >
 <div class="container">
-    <div class="row justify-content-center ">
+    <section id="home" style="padding-top: 15%;">
+    <div class="row justify-content-center mb-8 ">
         <div class="col-md-5 offset-md-1 main-part">
             <h1 class="heading">I<span class="name-neon">'</span>m Zeyad Salah<span class="name-neon">.</span></h1>
             <span class="subheading">CSE Student <span class="">@</span> EJUST <span class="name-neon">|</span>
@@ -40,6 +41,214 @@
             <img src="{% static 'portfolio/main.jpeg' %}" class="img-fluid">
         </div>
     </div>
+    </section>
+    <br>
+    <br>
+    <section id="projects">
+    <div class="row justify-content-center pt-4">
+        <div class="title mb-8">
+            <h2>Projects</h2>
+            <hr>
+        </div>
+        <div class="swiper">
+            <div class="slider-box"></div>
+            <div class="swiper-wrapper">
+                {% for web in webs %}
+                <div class="swiper-slide ">
+                    <div class="container swiper-container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5 project-img">
+                            <img src="{% static 'portfolio/'|add:web.image %}" class="img-fluid">
+                        </div>
+                        <div class="project-content  col-md-4">
+                            <h4 class="name-neon">{{web.name}}</h4>
+                            <p><strong>Tools: </strong>{{web.tools}}</p>
+                            <br>
+                            <p>{{web.description}}</p>
+                            {% if web.link %}
+                            <a href="{{web.link}}" target="_blank">
+                                <button class="btn btn-dark neon">Visit <i class="fa fa-link"></i></button>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination "></div>
+        </div>
+    </div>
+    </section>
+    <br>
+    <br>
+    <section id="certificate">
+        <div class="title mb-8">
+            <h2>Certificates</h2>
+            <hr>
+        </div>
+        <div id="certificate-container" class="row row-cols-1 row-cols-md-3 g-4 mb-8">
+            {% for certificate in certificates %}
+            <div class="col certificate-item" data-id="{{ forloop.counter0 }}">
+                <div class="cer-img">
+                    <img src="{% static 'portfolio/'|add:certificate.image %}" class="img-fluid">
+                </div>
+                <br>
+                <a class="nav-link cer-name" href="" data-bs-toggle="modal" data-bs-target="#exampleModal-{{certificate.id}}">
+                    <h3 class="neon" style="text-align:center">{{certificate.name}}</h3>
+                </a>
+                
+                <div class="modal modal-lg fade" id="exampleModal-{{certificate.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: #222120;">
+                                <h1 class="modal-title fs-5 neon" id="exampleModalLabel">{{certificate.name}}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="background-color: #2c2b29;">
+                                <div class="main-img">
+                                    <img src="{% static 'portfolio/'|add:certificate.image %}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="pagination justify-content-center" style="padding-top: 3rem;">
+            <button id="prev-page" onclick="prevPage()" class="btn btn-dark neon" disabled>Previous</button>
+            <span id="page-number" class="neon" style="padding-left: 1rem; padding-right: 1rem;">1</span>
+            <button id="next-page" onclick="nextPage()" class="btn btn-dark neon">Next</button>
+        </div>
+    </section>
+    
+    <br>
+    <br>
+    <section id="about">
+    <div class="row justify-content-center ">
+        <h2 class="">About Me</h2>
+        <hr>
+        <div class="col-md-5 offset-md-1 about-heading">
+            <h1>Hi, I<span class="name-neon">'</span>m <span class="name-neon">Zeyad</span></h1>
+            <br>
+            <p>A <strong>Senior</strong> Computer Science and Engineering student at Egypt-Japan University of Science and Technology <strong>(E-JUST)</strong>
+                with CGPA of <strong>3.89</strong>, aspiring to become a professional <strong>Back-End Developer</strong>. 
+                I am actively seeking internships and freelance opportunities in back-end and full-stack web developement 
+                in order to apply my knowledge and skills I have gained through my academic studies, personal projects and previous internships. 
+            </p>
+            <p>I am dedicated to continuously expanding my expertise through courses and significant projects, 
+                striving to build a distinct and expert presence in my field.<strong> Self-discipline</strong> and 
+                <strong>Consistency</strong> have been crucial in my journey so far and will continue to drive me towards
+                my professional goals. I am eager to collaborate and achieve shared success, so please feel free to reach out. </p>
+            <br>
+            <a href="{% static 'portfolio/Resume.pdf' %}" download="Zeyad's Resume">
+                <button class="btn btn-dark neon resume">Resume <i class="fa fa-download"></i></button>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4 about-img mt-md-0 mt-4 ">
+            <img src="{% static 'portfolio/main.jpeg' %}" class="img-fluid">
+        </div>
+    </div>
+    </section>
+    <br>
+    <br>
+    <section id="contact">
+    <div class="row justify-content-center ">
+        <h2 class="">Contact</h2>
+        <hr>
+            <div class="col-md-5 offset-md-1 ">
+            <h3 class="name-neon contact-heading">Contact</h3>
+            <p>Looking forward to hearing from you</p>
+            <br>
+            <h5 >Phone</h5>
+            +20 1112215113
+            <br>
+            <br>
+            <h5 >Email</h5>
+            zeyad.moussa@ejust.edu.eg
+            <div class="container py-5">
+                <a href="https://www.linkedin.com/in/zeyad02" class=" nav-link fa fa-linkedin-square" id="linkedin"></a>
+                <a href="https://github.com/zeyadsalah22" class="nav-link fa fa-github-square github" id="github"></a>
+                <a href="https://www.facebook.com/zeyad.salah.526?mibextid=ZbWKwL" class="nav-link fa fa-facebook-square" id="facebook"></a>
+                <a href="https://instagram.com/zeyadsalah66?igshid=OGQ5ZDc2ODk2ZA==" class="nav-link fa fa-instagram" id="instagram"></a>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 contact-part mt-md-0 mt-4 ">
+            <form id="contact-form">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label name-neon">Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label name-neon">Email address*</label>
+                    <input type="email" class="form-control" required id='email' placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label name-neon">Message</label>
+                    <textarea class="form-control" id="message"  rows="3"></textarea>
+                  </div>
+                  <button class="btn btn-dark neon" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    </section>
 </div>
 </main>
+<script type="text/javascript">
+    const itemsPerPage = 9;
+    let currentPage = 1;
+    const certificateItems = document.querySelectorAll('.certificate-item');
+    const totalItems = certificateItems.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    function showPage(page) {
+        const start = (page - 1) * itemsPerPage;
+        const end = page * itemsPerPage;
+        certificateItems.forEach((item, index) => {
+            item.style.display = (index >= start && index < end) ? 'block' : 'none';
+        });
+
+        document.getElementById('page-number').innerText = page;
+        document.getElementById('prev-page').disabled = page === 1;
+        document.getElementById('next-page').disabled = page === totalPages;
+    }
+
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    }
+
+    // Initialize the first page
+    document.addEventListener('DOMContentLoaded', function() {
+        showPage(currentPage);
+    });
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+
+        autoplay: {
+        delay:4000,
+        disableOnInteraction: true
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        },
+        speed:1000,
+        keyboard: true,
+    });
+    </script>
 {% endblock %}
